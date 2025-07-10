@@ -1,0 +1,189 @@
+ b -----------------------------------------------------------
+['admin', 'config', 'local', 'sample']
+ c -----------------------------------------------------------
+['cie', 'rand', 'zips', 'books', 'grades']
+ d -----------------------------------------------------------
+{'_id': 1,
+ 'authors': ['W. Frank Ableson', 'Charlie Collins', 'Robi Sen'],
+ 'categories': ['Open Source', 'Mobile'],
+ 'isbn': '1933988673',
+ 'longDescription': 'Android is an open source mobile phone platform based on '
+                    'the Linux operating system and developed by the Open '
+                    'Handset Alliance, a consortium of over 30 hardware, '
+                    'software and telecom companies that focus on open '
+                    'standards for mobile devices. Led by search giant, '
+                    'Google, Android is designed to deliver a better and more '
+                    'open and cost effective mobile experience.    Unlocking '
+                    "Android: A Developer's Guide provides concise, hands-on "
+                    'instruction for the Android operating system and '
+                    'development tools. This book teaches important '
+                    'architectural concepts in a straightforward writing style '
+                    'and builds on this with practical and useful examples '
+                    'throughout. Based on his mobile development experience '
+                    'and his deep knowledge of the arcane Android technical '
+                    'documentation, the author conveys the know-how you need '
+                    'to develop practical applications that build upon or '
+                    'replace any of Androids features, however small.    '
+                    "Unlocking Android: A Developer's Guide prepares the "
+                    'reader to embrace the platform in easy-to-understand '
+                    'language and builds on this foundation with re-usable '
+                    'Java code examples. It is ideal for corporate and '
+                    'hobbyists alike who have an interest, or a mandate, to '
+                    "deliver software functionality for cell phones.    WHAT'S "
+                    "INSIDE:        * Android's place in the market      * "
+                    'Using the Eclipse environment for Android '
+                    'development      * The Intents - how and why they are '
+                    'used      * Application classes:            o '
+                    'Activity            o Service            o '
+                    'IntentReceiver       * User interface design      * Using '
+                    'the ContentProvider to manage data      * Persisting data '
+                    'with the SQLite database      * Networking examples      '
+                    '* Telephony applications      * Notification methods      '
+                    '* OpenGL, animation & multimedia      * Sample '
+                    'Applications  ',
+ 'pageCount': 416,
+ 'publishedDate': datetime.datetime(2009, 4, 1, 7, 0),
+ 'shortDescription': "Unlocking Android: A Developer's Guide provides concise, "
+                     'hands-on instruction for the Android operating system '
+                     'and development tools. This book teaches important '
+                     'architectural concepts in a straightforward writing '
+                     'style and builds on this with practical and useful '
+                     'examples throughout.',
+ 'status': 'PUBLISH',
+ 'thumbnailUrl': 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg',
+ 'title': 'Unlocking Android'}
+ e -----------------------------------------------------------
+431
+ a -----------------------------------------------------------
+Books with more than 400 pages: 157
+Published books with more than 400 pages: 155
+ b -----------------------------------------------------------
+Number of books mentioning Android: 4
+ c -----------------------------------------------------------
+Distinct Category1 list: ['In Action', 'Business', 'Next Generation Databases', 'java', 'Web Development', 'Open Source', 'SOA', 'Networking', 'Computer Graphics', 'Object-Technology Programming', 'Java', 'XML', 'Mobile Technology', 'Miscellaneous', 'Microsoft .NET', 'Client-Server', 'Internet', 'internet', 'Perl', 'Object-Oriented Programming', 'PowerBuilder', 'Algorithmic Art', 'Software Engineering', 'Programming', 'Microsoft/.NET', 'Theory', 'PHP', 'Microsoft', 'Python']
+Distinct Category2 list: ['Open Source', '', 'Software Development', 'Client-Server', 'P', 'Python', 'Mobile', 'Computer Graphics', 'Theory', 'Java', 'Perl', 'Networking', 'Software Engineering', 'Internet', 'Business', 'S', '.NET']
+ d -------------------------------------------------------------
+Number of books mentioning Python, Java, C++, or Scala: 131
+ e -------------------------------------------------------------
+P: min=512, max=512, avg=512.00
+In Action: min=0, max=0, avg=0.00
+Miscella: min=0, max=0, avg=0.00
+Business: min=180, max=696, avg=404.17
+Next Generation Databases: min=0, max=0, avg=0.00
+Open Source: min=416, max=532, avg=474.00
+java: min=0, max=0, avg=0.00
+Web Development: min=300, max=688, avg=441.47
+.NET: min=925, max=925, avg=925.00
+SOA: min=250, max=250, avg=250.00
+Networking: min=0, max=591, avg=366.43
+Computer Graphics: min=328, max=840, avg=520.33
+Mobile: min=416, max=416, avg=416.00
+Object-Technology Programming: min=200, max=200, avg=200.00
+Java: min=0, max=1088, avg=412.22
+XML: min=304, max=680, avg=482.00
+Mobile Technology: min=0, max=504, avg=296.50
+: min=200, max=368, avg=284.00
+Miscellaneous: min=316, max=1096, avg=706.00
+Microsoft .NET: min=0, max=848, avg=437.03
+Client-Server: min=220, max=1101, avg=516.00
+Internet: min=0, max=912, avg=441.24
+internet: min=400, max=400, avg=400.00
+S: min=350, max=350, avg=350.00
+Perl: min=304, max=504, avg=385.33
+Object-Oriented Programming: min=350, max=512, avg=408.50
+PowerBuilder: min=362, max=550, avg=433.71
+Programming: min=0, max=570, avg=362.17
+Software Engineering: min=0, max=544, avg=287.75
+Algorithmic Art: min=0, max=0, avg=0.00
+Microsoft/.NET: min=0, max=0, avg=0.00
+Computer Graph: min=400, max=400, avg=400.00
+Theory: min=280, max=591, avg=420.43
+Software Development: min=600, max=600, avg=600.00
+PHP: min=552, max=552, avg=552.00
+Microsoft: min=344, max=925, avg=572.38
+Python: min=350, max=688, avg=482.33
+Client Server: min=368, max=368, avg=368.00
+ f -------------------------------------------------------------
+Title: Android in Action, Second Edition, Published Date: 2011-01-14
+Title: Specification by Example, Published Date: 2011-06-03
+Title: Flex 4 in Action, Published Date: 2010-11-15
+Title: Flex on Java, Published Date: 2010-10-15
+Title: OSGi in Depth, Published Date: 2011-12-12
+Title: Griffon in Action, Published Date: 2012-06-04
+Title: Brownfield Application Development in .NET, Published Date: 2010-04-16
+Title: MongoDB in Action, Published Date: 2011-12-12
+Title: jQuery in Action, Second Edition, Published Date: 2010-06-01
+Title: ASP.NET 4.0 in Practice, Published Date: 2011-05-15
+Title: Hello! Python, Published Date: 2012-02-13
+Title: iOS in Practice, Published Date: 2013-11-01
+Title: The Quick Python Book, Second Edition, Published Date: 2010-01-01
+Title: Spring Dynamic Modules in Action, Published Date: 2010-09-04
+Title: Android in Practice, Published Date: 2011-09-30
+Title: Hello! HTML5 & CSS3, Published Date: 2012-10-17
+Title: Spring Roo in Action, Published Date: 2012-04-13
+Title: SOA Governance in Action, Published Date: 2012-07-27
+Title: OSGi in Action, Published Date: 2011-04-06
+Title: SharePoint 2010 Site Owner's Manual, Published Date: 2012-02-13
+ g -------------------------------------------------------------
+{'_id': 21, 'title': '3D User Interfaces with Java 3D', 'author_1': 'Jon Barrilleaux'}
+{'_id': 11, 'title': 'Flexible Rails', 'author_1': 'Peter Armstrong'}
+{'_id': 5, 'title': 'Flex 4 in Action', 'author_1': 'Tariq Ahmed', 'author_2': 'Dan Orlando', 'author_3': 'John C. Bland II', 'author_4': 'Joel Hooks'}
+{'_id': 18, 'title': 'Distributed Application Development with PowerBuilder 6.0', 'author_1': 'Michael J. Barlotta'}
+{'_id': 13, 'title': 'Hello! Flex 4', 'author_1': 'Peter Armstrong'}
+{'_id': 10, 'title': 'OSGi in Depth', 'author_1': 'Alexandre de Castro Alves'}
+{'_id': 22, 'title': 'Hibernate in Action', 'author_1': 'Christian Bauer', 'author_2': 'Gavin King'}
+{'_id': 2, 'title': 'Android in Action, Second Edition', 'author_1': 'W. Frank Ableson', 'author_2': 'Robi Sen'}
+{'_id': 14, 'title': 'Coffeehouse', 'author_1': 'Levi Asher', 'author_2': 'Christian Crumlish'}
+{'_id': 6, 'title': 'Collective Intelligence in Action', 'author_1': 'Satnam Alag'}
+{'_id': 17, 'title': 'MongoDB in Action', 'author_1': 'Kyle Banker'}
+{'_id': 16, 'title': 'Brownfield Application Development in .NET', 'author_1': 'Kyle Baley', 'author_2': 'Donald Belcham'}
+{'_id': 8, 'title': 'Flex on Java', 'author_1': 'Bernerd Allmon', 'author_2': 'Jeremy Anderson'}
+{'_id': 19, 'title': 'Jaguar Development with PowerBuilder 7', 'author_1': 'Michael Barlotta'}
+{'_id': 4, 'title': 'Flex 3 in Action', 'author_1': 'Tariq Ahmed with Jon Hirschi', 'author_2': 'Faisal Abid'}
+{'_id': 9, 'title': 'Griffon in Action', 'author_1': 'Andres Almiray', 'author_2': 'Danno Ferrin', 'author_3': '', 'author_4': 'James Shingler'}
+{'_id': 1, 'title': 'Unlocking Android', 'author_1': 'W. Frank Ableson', 'author_2': 'Charlie Collins', 'author_3': 'Robi Sen'}
+{'_id': 3, 'title': 'Specification by Example', 'author_1': 'Gojko Adzic'}
+{'_id': 7, 'title': 'Zend Framework in Action', 'author_1': 'Rob Allen', 'author_2': 'Nick Lo', 'author_3': 'Steven Brown'}
+{'_id': 15, 'title': 'Team Foundation Server 2008 in Action', 'author_1': 'Jamil Azher'}
+ h -------------------------------------------------------------
+Author: None, Publications: 37
+Author: Vikram Goyal, Publications: 12
+Author: Don Jones, Publications: 6
+Author: Christian Bauer, Publications: 4
+Author: Craig Walls, Publications: 4
+Author: Richard Siddaway, Publications: 3
+Author: Jeffrey Palermo, Publications: 3
+Author: Erik Hatcher, Publications: 3
+Author: W. Frank Ableson, Publications: 3
+Author: Ted Neward, Publications: 3
+ i -------------------------------------------------------------
+Number of authors: 0, Number of books: 37
+Number of authors: 1, Number of books: 206
+Number of authors: 2, Number of books: 105
+Number of authors: 3, Number of books: 9
+Number of authors: 4, Number of books: 47
+Number of authors: 5, Number of books: 16
+Number of authors: 6, Number of books: 6
+Number of authors: 7, Number of books: 2
+Number of authors: 8, Number of books: 3
+ j -------------------------------------------------------------
+Author: Vikram Goyal, Position: 0, Occurrences: 12
+Author: Don Jones, Position: 0, Occurrences: 6
+Author: Yehuda Katz, Position: 1, Occurrences: 5
+Author: Gavin King, Position: 1, Occurrences: 4
+Author: Christian Bauer, Position: 0, Occurrences: 4
+Author: Craig Walls, Position: 0, Occurrences: 4
+Author: Erik Hatcher, Position: 0, Occurrences: 3
+Author: David A. Black, Position: 0, Occurrences: 3
+Author: Bear Bibeault, Position: 0, Occurrences: 3
+Author: Greg Low, Position: 2, Occurrences: 3
+Author: Dave Crane, Position: 0, Occurrences: 3
+Author: Ted Neward, Position: 0, Occurrences: 3
+Author: Jon Skeet, Position: 0, Occurrences: 3
+Author: Jeffrey Palermo, Position: 0, Occurrences: 3
+Author: Richard Siddaway, Position: 0, Occurrences: 3
+Author: W. Frank Ableson, Position: 0, Occurrences: 3
+Author: Tim Hatton, Position: 0, Occurrences: 3
+Author: Chris Buckett, Position: 0, Occurrences: 2
+Author: Hanumant Deshmukh, Position: 0, Occurrences: 2
+Author: Paul S. Randal, Position: 4, Occurrences: 2

@@ -1,0 +1,370 @@
+exit
+)
+  { name: 1, _id: 0 }
+  { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } } },
+db.cie.find(
+db.cie.find({ "acquisitions.company.name": "LittleBigPlanet" },{ name: 1})
+it
+db.cie.find({"acquisitions":{ "$elemMatch":{"price_currency_code" : {"$ne":"USD"}}}},{"name":1})
+db.cie.find({ "acquisitions.price_currency_code": { $ne: "USD"}, "name": {$eq: "Facebook"} }, { name: 1})
+db.cie.find({ "acquisitions.price_currency_code": { $ne: "USD", $eq:"Facebook" } }, { name: 1})
+it
+db.cie.find({ "acquisitions.price_currency_code": { $ne: "USD" } }, { name: 1})
+it
+db.cie.find({"acquisitions":{ "$elemMatch":{"price_currency_code" : {"$ne":"USD"}}}},{"name":1})
+db.cie.find({ "acquisitions.price_currency_code": { $ne: "USD" } }, { name: 1})
+use sample
+db.cie.find({ "acquisitions.price_currency_code": { $ne: "USD" } }, { name: 1})
+client["sample"]
+show dbs command
+db.zips.find({"city":"BOSTON"},{"city":1}).explain("executionStats")
+db.zips.createIndex({"city":1})
+)
+  ]
+    }
+      $sort: {nb_cie:-1}
+    {
+    },
+      $group: {"_id":"$founded_year", "nb_cie":{$sum:1}}
+    {
+    },
+      $match: {"offices.city":"Paris","founded_year":{$gt:1999}}
+  [ {
+db.cie.aggregate(
+)
+  ]
+    }
+      $sort: {nb_cie:-1}
+    {
+    },
+      $group: {"_id":"$founded_year", "nb_cie":{$sum:1}}
+    {
+  [
+db.cie.aggregate(
+)
+  ]
+    }
+      $group: {"_id":"$founded_year"}
+    {
+  [
+db.cie.aggregate(
+)
+  ]
+  }}
+      "title":{$arrayElemAt : ["$relationships.title",0]}    }
+        {$arrayElemAt : ["$relationships.person.last_name",0]}]},
+        {$arrayElemAt : ["$relationships.person.first_name",0]}," ",
+      {"name": {$concat : [
+    "employee":
+    {"_id":1,"society":"$name",
+  {$project : 
+  }, 
+    }
+      ]
+        {"relationships.person.last_name":"Musk"}
+        {"relationships.person.first_name":"Elon"}, 
+      [
+    {$and : 
+  {$match : 
+db.cie.aggregate([
+)
+  ]
+  }
+    }}
+      "last_name":"$relationships.person.last_name"
+      {"first_name":"$relationships.person.first_name",
+    "employee":
+    {"_id":1,"society":"$name",
+  {$project : 
+  }, 
+    }
+      ]
+        {"relationships.person.last_name":"Musk"}
+        {"relationships.person.first_name":"Elon"}, 
+      [
+    {$and : 
+  {$match : 
+db.cie.aggregate([
+)
+  ]
+  {$project : {"_id":1,"society":"$name"}}
+  }, 
+    }
+      ]
+        {"relationships.person.last_name":"Musk"}
+        {"relationships.person.first_name":"Elon"}, 
+      [
+    {$and : 
+  {$match : 
+db.cie.aggregate([
+)
+  ]
+  {$project : {"_id":1,"name":1}}
+  }, 
+    }
+      ]
+        {"relationships.person.last_name":"Musk"}
+        {"relationships.person.first_name":"Elon"}, 
+      [
+    {$and : 
+  {$match : 
+db.cie.aggregate([
+)
+  }]
+    }
+      ]
+        {"relationships.person.last_name":"Musk"}
+        {"relationships.person.first_name":"Elon"}, 
+      [
+    {$and : 
+  {$match : 
+db.cie.aggregate([
+)
+  ]
+  {$match : {"acquisitions.company.name":"LittleBigPlanet"}}
+db.cie.aggregate([
+)
+  ]
+  {$project : {"_id":1,"name":1}}
+  {$match : {"offices.city":"Seattle"}},
+db.cie.aggregate([
+)
+  { name: 1, _id: 0 }
+  { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } } },
+db.cie.find(
+db.cie.find({ "acquisitions.company.name": "LittleBigPlanet" },{ name: 1})
+... )
+...   { name: 1, _id: 0 }
+...   { "acquisitions.company.name": "LittleBigPlanet" },
+db.cie.find(
+db.cie.find({name: 1,acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } },"name":1})
+db.cie.find({name: 1,acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } },_id: 0})
+sample> db.cie.find({name: 1,acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } },_id: 0})
+)
+  {"name":1, "_id":0}
+      {"price_currency_code" : {"$ne":"USD"}}}},
+    { "$elemMatch": 
+  {"acquisitions": 
+db.cie.find(
+)
+  { name: 1, _id: 0 }
+  { "acquisitions.price_currency_code": { $ne: "USD" } },
+db.cie.find(
+)
+  {"name":1} 
+       "acquired_day":2}}},
+       "acquired_month": 3,
+      {"acquired_year":2010, 
+    {"$elemMatch":
+  {"acquisitions":
+db.cie.find(
+db.cie.find({name: 1,acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } },_id: 0})
+)
+  }
+    _id: 0
+    acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } },
+    name: 1, 
+  { 
+  { "acquisitions.company.name": "LittleBigPlanet" },
+db.cie.find(
+)
+  { name: 1, _id: 0 }
+  { "acquisitions.company.name": "LittleBigPlanet" },
+db.cie.find(
+db.collection.find( { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } }}, {"name":1} )
+db.collection.find( { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } }, {"name":1} )
+db.collection.find({ "acquisitions.company.name": "LittleBigPlanet" }, {"name":1})
+db.collection.find({ "acquisitions.company.name": "LittleBigPlanet" })
+  { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } } }
+  { "acquisitions.company.name": "LittleBigPlanet" },
+db.collection.find(
+)
+  { acquisitions: { $elemMatch: { "company.name": "LittleBigPlanet" } } }
+  { "acquisitions.company.name": "LittleBigPlanet" },
+db.collection.find(
+)
+  }
+    _id: 0
+    "acquisitions.$": 1,
+  { 
+  { "acquisitions.company.name": "LittleBigPlanet" },
+db.collection.find(
+db.cie.find({"acquisitions":{"$elemMatch":{"company:name":"LittleBigPlanet"}}},)
+  {"name":1} 
+       "acquired_day":2}}},
+       "acquired_month": 3,
+      {"acquired_year":2010, 
+    {"$elemMatch":
+  {"acquisitions":
+db.cie.find(
+)
+  {"name":1} 
+       "acquired_day":2}}},
+       "acquired_month": 3,
+      {"acquired_year":2010, 
+    {"$elemMatch":
+  {"acquisitions":
+db.cie.find(
+db.cie.find({ "name": "Sony" }, { "acquisitions": 1 })
+  )
+  {"name":1,"founded_year":1,"_id" : 0}
+  { "acquisitions.0.acquired_year": {$gt : 2007} }, 
+db.cie.find(
+db.cie.find({ "name": "Sony" }, { "acquisitions": 1 })
+  }
+    ]
+      }
+        company: { name: 'Gaikai', permalink: 'gaikai' }
+        acquired_day: 2,
+        acquired_month: 7,
+        acquired_year: 2012,
+        source_description: 'Sony Acquires Cloud-Gaming Company Gaikai For $380 Million',
+        source_url: 'http://allthingsd.com/20120702/sony-acquires-cloud-gaming-company-gaikai-for-380-million/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: 380000000,
+      {
+      },
+        company: { name: 'LittleBigPlanet', permalink: 'littlebigplanet' }
+        acquired_day: 2,
+        acquired_month: 3,
+        acquired_year: 2010,
+        source_description: 'Sony Buys Developer Of Hit Game LittleBigPlanet',
+        source_url: 'http://paidcontent.org/article/419-sony-buys-developer-of-hit-game-littlebigplanet/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: null,
+      {
+      },
+        }
+          permalink: 'convergent-media-systems'
+          name: 'Convergent Media Systems',
+        company: {
+        acquired_day: 28,
+        acquired_month: 1,
+        acquired_year: 2010,
+        source_description: 'Sony Electronics Acquires Convergent Media Systems',
+        source_url: 'http://www.freshnews.com/news/273657/sony-electronics-acquires-convergent-media-systems',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: null,
+      {
+      },
+        company: { name: 'Gracenote', permalink: 'gracenote' }
+        acquired_day: 22,
+        acquired_month: 4,
+        acquired_year: 2008,
+        source_description: 'Sony Buys Gracenote for $260M',
+        source_url: 'http://www.techcrunch.com/2008/04/22/sony-buys-gracenote-for-260m/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: 260000000,
+      {
+    acquisitions: [
+    _id: ObjectId("52cdef7c4bab8bd675297e6f"),
+  {
+[
+sample> db.cie.find({ "name": "Sony" }, { "acquisitions": 1 })
+db.cie.findOne()
+use sample
+show dbs
+use cie
+exit
+db.cie.findOne()
+]
+  }
+    ]
+      }
+        company: { name: 'Gaikai', permalink: 'gaikai' }
+        acquired_day: 2,
+        acquired_month: 7,
+        acquired_year: 2012,
+        source_description: 'Sony Acquires Cloud-Gaming Company Gaikai For $380 Million',
+        source_url: 'http://allthingsd.com/20120702/sony-acquires-cloud-gaming-company-gaikai-for-380-million/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: 380000000,
+      {
+      },
+        company: { name: 'LittleBigPlanet', permalink: 'littlebigplanet' }
+        acquired_day: 2,
+        acquired_month: 3,
+        acquired_year: 2010,
+        source_description: 'Sony Buys Developer Of Hit Game LittleBigPlanet',
+        source_url: 'http://paidcontent.org/article/419-sony-buys-developer-of-hit-game-littlebigplanet/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: null,
+      {
+      },
+        }
+          permalink: 'convergent-media-systems'
+          name: 'Convergent Media Systems',
+        company: {
+        acquired_day: 28,
+        acquired_month: 1,
+        acquired_year: 2010,
+        source_description: 'Sony Electronics Acquires Convergent Media Systems',
+        source_url: 'http://www.freshnews.com/news/273657/sony-electronics-acquires-convergent-media-systems',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: null,
+      {
+      },
+        company: { name: 'Gracenote', permalink: 'gracenote' }
+        acquired_day: 22,
+        acquired_month: 4,
+        acquired_year: 2008,
+        source_description: 'Sony Buys Gracenote for $260M',
+        source_url: 'http://www.techcrunch.com/2008/04/22/sony-buys-gracenote-for-260m/',
+        term_code: null,
+        price_currency_code: 'USD',
+        price_amount: 260000000,
+      {
+    acquisitions: [
+    _id: ObjectId("52cdef7c4bab8bd675297e6f"),
+  {
+[
+sample> db.cie.find({ "name": "Sony" }, { "acquisitions": 1 })
+db.cie.findOne()
+use cie
+exit
+mongoimport -d sample -c cie --authenticationDatabase admin -u datascientest -p dst123 --file /data/db/companies.json
+db.zips.find({"state":"TX"},{"pop":1,"city":1})
+db.zips.find({"state": "TX"},{"pop":0})
+db.zips.find({},{"pop":1})
+db.zips.find({"state":"TX"},{"pop":1})
+db.zips.find().count()
+db.zips.find().limit(5)
+db.grades.find().sort({"student_id":-1,"class_id":1})
+db.grades.find().sort({"student_id":-1})
+)
+  }
+    "$expr": {$eq : ["$student_id","$class_id"]}
+  {
+db.grades.find(
+  )
+    }
+    {"pop":{$gt : 10000}}]
+    {"pop":{$lt : 20000}}, 
+  $and : [
+db.zips.find({
+db.zips.find({"pop" : {$gte : 12678}})
+show dbs command
+db.zips.drop()
+db.zips.deleteMany({"state":"France"})
+  )
+  {$push: {"scores" :  {"exam": "quizz" , "score": 100.0}}}
+  {"_id":ObjectId("56d5f7eb604eb380b0d8d9c8")},
+db.grades.updateOne(
+db.grades.findOne()
+use sample
+db.grades.findOne()
+exit
+mongoimport -d sample -c grades --authenticationDatabase admin -u datascientest -p dst123 --file /data/db/grades.json
+db.zips.find({"state":"MA"})
+db.zips.findOne({"state":"MA"})
+db.zips.findOne({"pop":3450})
+db.zips.findOne()
+use sample
+db.zips.findOne()

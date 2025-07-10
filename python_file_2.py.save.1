@@ -1,0 +1,241 @@
+
+from pymongo import MongoClient
+
+from pprint import pprint
+
+client = MongoClient(
+    host="127.0.0.1",
+    port = 27017,
+    username = "datascientest",
+    password = "dst123"
+)
+
+
+print(client.list_database_names())
+
+db = client["sample"]
+
+collections = db.list_collection_names()
+print(collections)
+
+
+one_book = db.books.find_one()
+pprint(one_book)
+
+
+num_books = db.books.count_documents({})
+print(num_books)
+
+
+# Count books with pageCount > 400
+count_more_400 = db.books.count_documents({"pageCount": {"$gt": 400}})
+print("Books with more than 400 pages:", count_more_400)
+
+
+# Count number of books with more than 400 pages and were published
+count_more_400_published = db.books.count_documents(
+    {"pageCount": {"$gt": 400}, "status": "PUBLISH"}
+)
+print(
+    "Published books with more than 400 pages:",
+    count_more_400_published
+)
+
+
+# number of books with the keyword Android in their description
+count_android = db.books.count_documents(
+    {
+        "$or": [
+            {"shortDescription": {"$regex": "Android", "$options": "i"}},
+            {"longDescription": {"$regex": "Android", "$options": "i"}}
+        ]
+    }
+)
+print("Number of books mentioning Android:", count_android)
+
+
+# Aggregate to get distinct categories at index 0 and 1
+result = list(
+    db.books.aggregate(
+        [
+            {
+                "$group": {
+                    "_id": None,
+                    "category0": {"$addToSet": {"$arrayElemAt": ["$categories", 0]}},
+                    "category1": {"$addToSet": {"$arrayElemAt": ["$categories", 1]}}
+                }
+            }
+        ]
+    )
+)
+
+# Print the two lists
+if result:
+    categories_0 = result[0]["category0"]
+    categories_1 = result[0]["category1"]
+    print("Distinct Category1 list:", categories_0)
+    print("Distinct Category2 list:", categories_1)
+else:
+    print("No data found")
+
+
+# d number of books containing the names Python, Java, C++, etc
+count_languages = db.books.count_documents(
+    {
+        "$or": [
+            {"longDescription": {"$regex": "Python", "$options": "i"}},
+            {"longDescription": {"$regex": "Java", "$options": "i"}},
+            {"longDescription": {"$regex": "C\\+\\+", "$options": "i"}},  # Escape the +
+            {"longDescription": {"$regex": "Scala", "$options": "i"}}
+        ]
+    }
+)
+
+print("Number of books mentioning Python, Java, C++, or Scala:", count_languages)
+
+
+
+
+# Aggregation pipeline
+pipeline = [
+    {"$unwind": "$categories"},  # Unwind the categories array
+    {
+        "$group": {
+            "_id": "$categories",
+            "minPages": {"$min": "$pageCount"},
+            "maxPages": {"$max": "$pageCount"},
+            "avgPages": {"$avg": "$pageCount"}
+        }
+    }
+]
+
+# Run the pipeline
+results = list(db.books.aggregate(pipeline))
+
+# Print results nicely
+for r in results:
+    category = r["_id"]
+    min_pages = r["minPages"]
+    max_pages = r["maxPages"]
+    avg_pages = r["avgPages"]
+    print(
+        f"{category}: min={min_pages}, max={max_pages}, avg={avg_pages:.2f}"
+    )
+
+
+
+
+# Aggregation pipeline
+pipeline = [
+    # Step 1: Extract year/month/day into new variables
+    {
+        "$addFields": {
+            "pubYear": {"$year": "$dates"},
+            "pubMonth": {"$month": "$dates"},
+            "pubDay": {"$dayOfMonth": "$dates"}
+        }
+    },
+    # Step 2: Filter only books published after 2009
+    {"$match": {"pubYear": {"$gt": 2009}}},
+    # Step 3: Limit to 20 results
+    {"$limit": 20}
+]
+
+
+print(" f -------------------------------------------------------------")
+# Run the pipeline
+results = list(db.books.aggregate(pipeline))
+
+# Display the first 20 with new fields
+for book in results:
+    print(
+        f"{book.get('title', '<no title>')}: "
+        f"{book['pubYear']}-{book['pubMonth']:02d}-{book['pubDay']:02d}"
+    )
+
+
+
+
+pipeline = [
+    # Step 1: Add a field for first author (authors[0])
+    {
+        "$addFields": {
+            "first_author": {"$arrayElemAt": ["$authors", 0]}
+        }
+    },
+    # Step 2: Group by first_author and count
+    {
+        "$group": {
+            "_id": "$first_author",
+            "num_publications": {"$sum": 1}
+        }
+    },
+    # Step 3: Sort descending by number of publications
+    {
+        "$sort": {"num_publications": -1}
+    },
+    # Step 4: Limit to top 10 authors
+    {
+        "$limit": 10
+    }
+]
+
+# Run the aggregation
+results = list(db.books.aggregate(pipeline))
+
+# Print results
+for r in results:
+    print(f"Author: {r['_id']}, Publications: {r['num_publications']}")print(" g -------------------------------------------------------------")
+pipeline = [
+    # Step 1: Sort chronologically
+    {"$sort": {"dates": 1}},
+    # Step 2: Project new columns from authors list
+    {
+        "$project": {
+            "title": 1,  # Keep the title
+            "author_1": {"$arrayElemAt": ["$authors", 0]},
+            "author_2": {"$arrayElemAt": ["$authors", 1]},
+            "author_3": {"$arrayElemAt": ["$authors", 2]},
+            "author_4": {"$arrayElemAt": ["$authors", 3]},
+        }
+    },
+    # Step 3: Limit to first 20
+    {"$limit": 20}
+]
+
+# Run the pipeline
+for book in db.books.aggregate(pipeline):
+    print(book)
+
+
+
+pipeline = [
+    # Step 1: Add a field for first author (authors[0])
+    {
+        "$addFields": {
+            "first_author": {"$arrayElemAt": ["$authors", 0]}
+        }
+    },
+    # Step 2: Group by first_author and count
+    {
+        "$group": {
+            "_id": "$first_author",
+            "num_publications": {"$sum": 1}
+        }
+    },
+    # Step 3: Sort descending by number of publications
+    {
+        "$sort": {"num_publications": -1}
+    },
+    # Step 4: Limit to top 10 authors
+    {
+        "$limit": 10
+    }
+]
+
+# Run the aggregation
+results = list(db.books.aggregate(pipeline))
+
+# Print results
+for r in results:
+    print(f"Author: {r['_id']}, Publications: {r['num_publications']}")
